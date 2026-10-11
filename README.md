@@ -4,6 +4,12 @@ A complete full-stack real-time watch party platform that enables multiple users
 
 ---
 
+
+## Live Demo
+https://youtube-watch-party-system-pjgk.onrender.com
+
+
+
 ## 🌟 Key Features
 
 - **Authoritative Video Synchronization**: Server maintains a single source of truth for playback state (`videoId`, `playState`, `currentTime`) and calculates live elapsed drift across network latency.
