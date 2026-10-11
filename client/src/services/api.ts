@@ -1,6 +1,10 @@
 import { Participant, Room } from '../types/index';
 
-const API_BASE_URL = '/api';
+// Support VITE_API_URL for production (e.g. Render/Railway)
+const rawApiUrl = import.meta.env.VITE_API_URL;
+const API_BASE_URL = rawApiUrl
+  ? (rawApiUrl.endsWith('/api') ? rawApiUrl : `${rawApiUrl.replace(/\/$/, '')}/api`)
+  : '/api';
 
 export interface CreateRoomResponse {
   message: string;
